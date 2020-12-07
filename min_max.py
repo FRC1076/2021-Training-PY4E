@@ -3,9 +3,13 @@ def min_max():
     while True:
         num = input("Enter a number: ")
         if num == "done":
-            lst.sort()
-            min = lst[0]
-            max = lst[-1]
+            try:
+                lst.sort()
+                min = lst[0]
+                max = lst[-1]
+            except:
+                min = None
+                max = None
             print("Maximum is", max)
             print("Minimum is", min)
             break
