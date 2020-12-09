@@ -1,8 +1,19 @@
-largest = None
-smallest = None
-while True:
-    num = input("Enter a number: ")
-    if num == "done" : break
-    print(num)
+currentMax = None
+currentMin = None
 
-print("Maximum", largest)
+while (True):
+    try:
+        number = input("Input a number")
+        if number == 'Done':
+            break
+        if number > currentMax:
+            currentMax = number
+        if number < currentMin:
+            currentMin = number
+    except:
+        print("Not a number")
+
+print("Maximum: " + currentMax)
+print("Minimum: " + currentMin)
+
+#change
